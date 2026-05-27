@@ -48,7 +48,7 @@ pipeline {
                     
                 }
 
-                stage('E2E') {
+                stage('E2E Local') {
                     agent {
                         docker {
                             image 'mcr.microsoft.com/playwright:v1.39.0-jammy'
@@ -92,7 +92,7 @@ pipeline {
             }
         }
 
-        stage('E2E') {
+        stage('E2E Prod') {
             agent {
                 docker {
                     image 'mcr.microsoft.com/playwright:v1.39.0-jammy'
