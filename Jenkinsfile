@@ -103,13 +103,13 @@ pipeline {
             
         }
 
-        stage('Prod Approval') {
-            steps{                
-                timeout(time: 15, unit: 'MINUTES') {
-                    input 'Proceed to prod deploy?'
-                }
-            }
-        }
+        // stage('Prod Approval') {
+        //     steps{                
+        //         timeout(time: 15, unit: 'MINUTES') {
+        //             input 'Proceed to prod deploy?'
+        //         }
+        //     }
+        // }
 
 
         stage('Deploy Prod') {
